@@ -13,6 +13,7 @@ const ElementSelector: FC = () => {
           </span>
         );
       })}
+      <ElementChip element="reset" />
     </Box>
   );
 };
