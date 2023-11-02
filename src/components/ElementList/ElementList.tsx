@@ -12,42 +12,35 @@ const ElementList: FC = () => {
   );
 
   // Get the weaknesses for the selected elements
-  const weaknesses = selectedElements.flatMap((selectedElement) => {
-    const element = elementComparisson.find(
-      (item) => item.element === selectedElement
+
+  // Get the weaknesses for the selected elements
+  const weaknesses = selectedElements.flatMap((element) => {
+    const selectedElement = elementComparisson.find(
+      (item) => item.element === element
     );
-    if (element) {
-      return element.weakness.filter(
-        (weakness) =>
-          !elementComparisson.find(
-            (item) =>
-              item.element === weakness &&
-              item.immunity.includes(selectedElement)
-          )
-      );
-    }
-    return [];
+    return selectedElement ? selectedElement.weakness : [];
   });
 
-  // Find the unique weaknesses using a Set
-  const uniqueWeaknesses: string[] = Array.from(new Set(weaknesses)).filter(
-    (weakness) =>
-      elementComparisson.some(
-        (item) =>
-          item.element === weakness &&
-          !selectedElements.some((selectedElement) =>
-            item.immunity.includes(selectedElement)
-          )
-      )
+  //
+  // Get all immunities
+  const immunities = selectedElements.flatMap((element) => {
+    const selectedElement = elementComparisson.find(
+      (item) => item.element === element
+    );
+    return selectedElement ? selectedElement.immunity : [];
+  });
+
+  // Remove immunities from weaknesses array
+  const filteredWeaknesses = weaknesses.filter(
+    (weakness) => !immunities.includes(weakness)
   );
 
-  // Filter the elements array based on the unique weaknesses or use the elements array if no selected elements
+  // Make sure all elements are unique
+  const uniqueElements = Array.from(new Set(filteredWeaknesses));
+
+  // Show all elements if no elements are selected
   const filteredElements =
-    selectedElements.length > 0
-      ? elementComparisson
-          .filter((item) => uniqueWeaknesses.includes(item.element))
-          .map((item) => item.element)
-      : elements;
+    selectedElements.length > 0 ? uniqueElements : elements;
 
   return (
     <Grid container spacing={2}>
