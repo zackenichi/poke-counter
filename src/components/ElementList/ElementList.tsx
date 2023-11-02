@@ -44,11 +44,13 @@ const ElementList: FC = () => {
 
   return (
     <Grid container spacing={2}>
-      {filteredElements.map((element) => (
-        <Grid item md={2} xs={12} key={element}>
-          <ElementCard element={element} />
-        </Grid>
-      ))}
+      {filteredElements.map((element) => {
+        return (
+          <Grid item md={2} xs={12} key={element}>
+            <ElementCard element={element} />
+          </Grid>
+        );
+      })}
     </Grid>
   );
 };

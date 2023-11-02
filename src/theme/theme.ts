@@ -21,7 +21,7 @@ const componentOverrides: ThemeOptions['components'] = {
       h4: {
         fontSize: '0.8rem',
         fontWeight: 600,
-        color: colors.primary,
+        color: colors.cardbg,
       },
       body2: {
         fontSize: '16px',

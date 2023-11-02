@@ -6,7 +6,7 @@ const elementComparisson = [
   },
   {
     element: 'fire',
-    weakness: ['water', 'rock', 'dragon'],
+    weakness: ['water', 'rock', 'ground'],
     immunity: [],
   },
   {
