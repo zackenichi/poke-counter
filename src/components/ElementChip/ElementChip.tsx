@@ -3,18 +3,18 @@ import { FC } from 'react';
 import { ElementIcon } from '../ElementIcon';
 
 interface ElementChipProps {
-  label: string;
+  element: string;
 }
 
-const ElementChip: FC<ElementChipProps> = ({ label }) => {
+const ElementChip: FC<ElementChipProps> = ({ element }) => {
   const handleClick = () => {
-    console.log(`You clicked ${label}`);
+    console.log(`You clicked ${element}`);
   };
 
   return (
     <Chip
-      label={label}
-      icon={<ElementIcon element={label} />}
+      label={element}
+      icon={<ElementIcon element={element} />}
       onClick={handleClick}
       sx={{ mr: 1, my: 1, padding: '2px 5px', textTransform: 'uppercase' }}
     />

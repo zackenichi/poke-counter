@@ -14,8 +14,9 @@ const componentOverrides: ThemeOptions['components'] = {
         fontWeight: 800,
       },
       h3: {
-        fontSize: '1rem',
+        fontSize: '0.9rem',
         fontWeight: 600,
+        textTransform: 'uppercase',
       },
       h4: {
         fontSize: '0.8rem',
@@ -28,18 +29,6 @@ const componentOverrides: ThemeOptions['components'] = {
         textDecoration: 'underline',
         '&:hover': {
           cursor: 'pointer',
-        },
-      },
-    },
-  },
-  MuiInputBase: {
-    styleOverrides: {
-      root: {
-        // height: '2.5rem',
-        borderRadius: '8px',
-        backgroundColor: 'rgba(255, 255, 255, 0.15)',
-        '&:hover': {
-          backgroundColor: 'rgba(255, 255, 255, 0.25)',
         },
       },
     },

@@ -1,18 +1,19 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 
 import { ElementSelector } from '../ElementSelector';
 import { FC } from 'react';
+import { ElementList } from '../ElementList';
 
 const ContentArea: FC = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           <ElementSelector />
         </Container>
       </Grid>
       <Grid item xs={12}>
-        <Typography>Cards</Typography>
+        <ElementList />
       </Grid>
     </Grid>
   );
