@@ -1,47 +1,45 @@
 const getTypeIconSrc = (type: string) => `./images/types-icons/${type}.svg`;
 
 const getTypeColor = (type: string) => {
-  let color = '#FFFFFF';
-
   switch (type) {
     case 'bug':
-      return '#8bd674';
+      return '#A6B91A';
     case 'dark':
-      return '#75747e';
+      return '#705746';
     case 'dragon':
-      return '#1582e7';
+      return '#6F35FC';
     case 'electric':
-      return '#f2cb55';
+      return '#F7D02C';
     case 'fairy':
-      return '#e98acc';
+      return '#D685AD';
     case 'fighting':
-      return '#eb4971';
+      return '#C22E28';
     case 'fire':
-      return '#ff9448';
+      return '#EE8130';
     case 'flying':
-      return '#829edb';
+      return '#A98FF3';
     case 'ghost':
-      return '#6882d4';
+      return '#735797';
     case 'grass':
-      return '#8bbe8a';
+      return '#7AC74C';
     case 'ground':
-      return '#f78551';
+      return '#E2BF65';
     case 'ice':
-      return '#6bddce';
+      return '#96D9D6';
     case 'normal':
-      return '#c5c9d6';
+      return '#A8A77A';
     case 'poison':
-      return '#bd5fe9';
+      return '#A33EA1';
     case 'psychic':
-      return '#ff787a';
+      return '#F95587';
     case 'rock':
-      return '#d5c895';
+      return '#B6A136';
     case 'steel':
-      return '#4d92b4';
+      return '#B7B7CE';
     case 'water':
-      return '#58abf6';
+      return '#6390F0';
     default:
-      return color;
+      return '#FFFFFF';
   }
 };
 

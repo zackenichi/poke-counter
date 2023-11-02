@@ -9,7 +9,7 @@ const ElementSelector: FC = () => {
       {elements.map((element) => {
         return (
           <span key={element}>
-            <ElementChip label={element} />
+            <ElementChip element={element} />
           </span>
         );
       })}
