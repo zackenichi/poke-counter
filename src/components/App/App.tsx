@@ -1,5 +1,7 @@
 import { Box } from '@mui/material';
 import { FC } from 'react';
+import { Header } from '../Header';
+import { ContentArea } from '../ContentArea';
 
 const App: FC = () => {
   return (
@@ -9,6 +11,7 @@ const App: FC = () => {
         height: '100vh',
         gridTemplateRows: 'auto 1fr',
         gridTemplateAreas: `"header" "main"`,
+        p: 2,
       }}
       id="appContainer"
       role="main"
@@ -18,14 +21,15 @@ const App: FC = () => {
           gridArea: 'header',
         }}
       >
-        header
+        <Header />
       </Box>
       <Box
         sx={{
           gridArea: 'main',
+          marginTop: 2,
         }}
       >
-        content
+        <ContentArea />
       </Box>
     </Box>
   );
