@@ -5,9 +5,13 @@ import elements from '../../data/elements';
 
 const ElementSelector: FC = () => {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
       {elements.map((element) => {
-        return <ElementChip label={element} />;
+        return (
+          <span key={element}>
+            <ElementChip label={element} />
+          </span>
+        );
       })}
     </Box>
   );

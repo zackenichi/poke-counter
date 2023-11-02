@@ -1,10 +1,9 @@
 import { Chip } from '@mui/material';
 import { FC } from 'react';
-import FaceIcon from '@mui/icons-material/Face';
+import { ElementIcon } from '../ElementIcon';
 
 interface ElementChipProps {
   label: string;
-  icon?: React.ReactNode;
 }
 
 const ElementChip: FC<ElementChipProps> = ({ label }) => {
@@ -14,10 +13,10 @@ const ElementChip: FC<ElementChipProps> = ({ label }) => {
 
   return (
     <Chip
-      icon={<FaceIcon />}
       label={label}
-      sx={{ mr: 1, my: 1 }}
+      icon={<ElementIcon element={label} />}
       onClick={handleClick}
+      sx={{ mr: 1, my: 1, padding: '2px 5px', textTransform: 'uppercase' }}
     />
   );
 };
