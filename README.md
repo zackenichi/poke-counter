@@ -1,13 +1,13 @@
-## Pokemon Element Counter
+# Pokemon Element Counter
 
 This is a project called "Pokemon Element Counter" developed by ZacKenichi.
 
-# Description
+## Description
 
 The "Pokemon Element Counter" is a React application that allows users to view and compare the weaknesses of different Pokemon elements. It provides a visual representation of the elements and their corresponding weaknesses.
 Installation
 
-# To install and run the project, follow these steps:
+## To install and run the project, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
@@ -16,7 +16,7 @@ Installation
 5. Open your browser and visit http://localhost:3000 to view the application.
    Dependencies
 
-# The project uses the following dependencies:
+## The project uses the following dependencies:
 
 - @emotion/react: version 11.11.1
 - @emotion/styled: version 11.11.0
@@ -37,7 +37,7 @@ Installation
 - typescript: version 4.4.2
 - web-vitals: version 2.1.0
 
-# Usage
+## Usage
 
 The main component of the application is ElementList.tsx, located in the src/components/ElementList directory. This component displays a grid of Pokemon elements and their corresponding weaknesses.
 
