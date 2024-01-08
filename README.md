@@ -43,6 +43,8 @@ The main component of the application is ElementList.tsx, located in the src/com
 
 The ElementReducer.ts file, located in the src/store directory, contains the Redux slice for managing the state of the selected elements and their weaknesses.
 
+Updated URL to pokemon.zacsalazar.com
+
 To modify the behavior of the application, you can make changes to the ElementList.tsx component or update the Redux state using the actions provided by the ElementReducer.ts slice.
 Contributing
 
